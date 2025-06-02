@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/images/header-logo/logo-light-theme.png" alt="Logo Cristian Vargas" id="site-logo">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="pages/about.html" class="header__link">Sobre Mi</a></li>
+                    <li class="header__item">
+                        <a href="https://drive.google.com/file/d/1QWBX72jzV664El7PdRLUHfQmXtWlN_1b/view?usp=sharing" class="btn" target="_blank">
+                            Curriculum
+                            <ion-icon name="download-outline" class="btn-icon"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="theme-toggle" aria-label="Cambiar tema">
+                <div class="toggle-circle">
+                    <ion-icon class="toggle-sun" name="sunny"></ion-icon>
+                    <ion-icon class="toggle-moon" name="moon"></ion-icon>
+                </div>
+            </button>
+            <div class="header__hamburger" id="hamburger">
+                <span class="header__line"></span>
+                <span class="header__line"></span>
+                <span class="header__line"></span>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="section section--hero fade-in">
+            <div class="hero hero--row">
+                <div class="hero__content">
+                    <h2 class="hero__title hero__title--animated">
+                      <span class="static-title">Desarrollador</span>
+                      <span class="dropping-texts">
+                        <span>Full Stack</span>
+                        <span>Frontend</span>
+                        <span>Backend</span>
+                        <span>Mobile</span>  <!-- Antes DevOps, ahora Mobile con el mismo color -->
+                        <span>IoT</span>     <!-- Nueva palabra IoT con un nuevo color (ej. verde) -->
+                      </span>
+                    </h2>
+                    <p class="hero__description">
+                        Amo la tecnologia, la programacion me apasiona.
+                        Siempre estoy enfocado en encontrar soluciones.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="btn">
+                            Ver Proyectos
+                            <ion-icon name="code-outline" class="btn-icon"></ion-icon>
+                        </a>
+                        <a href="#contact" class="btn">
+                            Contacto
+                            <ion-icon name="mail-outline" class="btn-icon"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__image-container">
+                    <span class="hero__image-animated-border"></span>
+                    <img 
+                        src="assets/images/hero/profile-img.webp" 
+                        alt="Foto de Cristian Vargas" 
+                        class="hero__profile-img hero__profile-img--large"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section - Actualizado con las tecnologías que dominas -->
+        <section id="skills" class="section section--skills fade-in">
+            <h2 class="section__title">Skills</h2>
+            <div class="tech-icons">
+                <div class="tech-icon html-icon">
+                    <ion-icon name="logo-html5"></ion-icon>
+                    <span>HTML</span>
+                </div>
+                <div class="tech-icon css-icon">
+                    <ion-icon name="logo-css3"></ion-icon>
+                    <span>CSS</span>
+                </div>
+                <div class="tech-icon js-icon">
+                    <ion-icon name="logo-javascript"></ion-icon>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-icon angular-icon">
+                    <ion-icon name="logo-angular"></ion-icon>
+                    <span>Angular</span>
+                </div>
+                <div class="tech-icon node-icon">
+                    <ion-icon name="logo-nodejs"></ion-icon>
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-icon python-icon">
+                    <ion-icon name="logo-python"></ion-icon>
+                    <span>Python</span>
+                </div>
+                <div class="tech-icon flask-icon">
+                    <ion-icon name="flask-outline"></ion-icon> 
+                    <span>Flask</span>
+                </div>
+                <div class="tech-icon sql-icon">
+                    <ion-icon name="server-outline"></ion-icon>
+                    <span>SQL</span>
+                </div>
+                <div class="tech-icon git-icon">
+                    <ion-icon name="git-branch-outline"></ion-icon>
+                    <span>Git</span>
+                </div>
+                <div class="tech-icon scrum-icon">
+                    <ion-icon name="sync-outline"></ion-icon>
+                    <span>Scrum</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos destacados -->
+        <section id="projects" class="section section--projects slide-in-left">
+            <h2 class="section__title">Mis Proyectos</h2>
+            
+            <!-- Swiper -->
+            <div class="swiper projectsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 - Proyectos 1-3 -->
+                    <div class="swiper-slide">
+                        <div class="projects">
+                            <div class="project">
+                                <div class="project__image">
+                                    <img src="assets/images/projects/generic-project.webp" alt="E-commerce Platform">
+                                </div>
+                                <div class="project__content">
+                                    <h3 class="project__title">E-commerce Platform</h3>
+                                    <p class="section__description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                                    </p>
+                                    <div class="project__tags">
+                                        <span class="tag">React</span>
+                                        <span class="tag">Node.js</span>
+                                        <span class="tag">MongoDB</span>
+                                    </div>
+                                    <div class="project__links">
+                                        <a href="#" class="btn" target="_blank">
+                                            View Live
+                                            <ion-icon name="open-outline" class="btn-icon"></ion-icon>
+                                        </a>
+                                        <a href="#" class="btn" target="_blank">
+                                            Source Code
+                                            <ion-icon name="logo-github" class="btn-icon"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project">
+                                <div class="project__image">
+                                    <img src="assets/images/projects/generic-project.webp" alt="Task Management App">
+                                </div>
+                                <div class="project__content">
+                                    <h3 class="project__title">Task Management App</h3>
+                                    <p class="section__description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.
+                                    </p>
+                                    <div class="project__tags">
+                                        <span class="tag">Vue.js</span>
+                                        <span class="tag">Express</span>
+                                        <span class="tag">PostgreSQL</span>
+                                    </div>
+                                    <div class="project__links">
+                                        <a href="#" class="btn" target="_blank">
+                                            View Live
+                                            <ion-icon name="open-outline" class="btn-icon"></ion-icon>
+                                        </a>
+                                        <a href="#" class="btn" target="_blank">
+                                            Source Code
+                                            <ion-icon name="logo-github" class="btn-icon"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project">
+                                <div class="project__image">
+                                    <img src="assets/images/projects/generic-project.webp" alt="Weather Dashboard">
+                                </div>
+                                <div class="project__content">
+                                    <h3 class="project__title">Weather Dashboard</h3>
+                                    <p class="section__description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet magna sed risus tincidunt, vel cursus libero fermentum. Aliquam erat volutpat. Donec auctor blandit quam.
+                                    </p>
+                                    <div class="project__tags">
+                                        <span class="tag">Angular</span>
+                                        <span class="tag">TypeScript</span>
+                                        <span class="tag">Weather API</span>
+                                    </div>
+                                    <div class="project__links">
+                                        <a href="#" class="btn" target="_blank">
+                                            View Live
+                                            <ion-icon name="open-outline" class="btn-icon"></ion-icon>
+                                        </a>
+                                        <a href="#" class="btn" target="_blank">
+                                            Source Code
+                                            <ion-icon name="logo-github" class="btn-icon"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 - Proyectos 4-5 -->
+                    <div class="swiper-slide">
+                        <div class="projects">
+                            <div class="project">
+                                <div class="project__image">
+                                    <img src="assets/images/projects/generic-project.webp" alt="IoT Monitoring System">
+                                </div>
+                                <div class="project__content">
+                                    <h3 class="project__title">IoT Monitoring System</h3>
+                                    <p class="section__description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Donec auctor blandit quam sit amet vehicula. Nulla facilisi morbi tempus iaculis.
+                                    </p>
+                                    <div class="project__tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">Flask</span>
+                                        <span class="tag">IoT</span>
+                                        <span class="tag">Arduino</span>
+                                    </div>
+                                    <div class="project__links">
+                                        <a href="#" class="btn" target="_blank">
+                                            View Live
+                                            <ion-icon name="open-outline" class="btn-icon"></ion-icon>
+                                        </a>
+                                        <a href="#" class="btn" target="_blank">
+                                            Source Code
+                                            <ion-icon name="logo-github" class="btn-icon"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project">
+                                <div class="project__image">
+                                    <img src="assets/images/projects/generic-project.webp" alt="Portfolio Website">
+                                </div>
+                                <div class="project__content">
+                                    <h3 class="project__title">Portfolio Website</h3>
+                                    <p class="section__description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum.
+                                    </p>
+                                    <div class="project__tags">
+                                        <span class="tag">HTML5</span>
+                                        <span class="tag">CSS3</span>
+                                        <span class="tag">JavaScript</span>
+                                    </div>
+                                    <div class="project__links">
+                                        <a href="#" class="btn" target="_blank">
+                                            View Live
+                                            <ion-icon name="open-outline" class="btn-icon"></ion-icon>
+                                        </a>
+                                        <a href="#" class="btn" target="_blank">
+                                            Source Code
+                                            <ion-icon name="logo-github" class="btn-icon"></ion-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination projects-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Contacto - Con texto a la izquierda y enlaces a la derecha -->
+        <section id="contact" class="section section--contact slide-in-right">
+            <h2 class="section__title">Como contactarme</h2>
+            <div class="contact">
+                <div class="contact__text">
+                    <p class="section__description">
+                      Siempre estoy con ganas de conocer nuevos proyectos, ideas  u oportunidades, si querés charlar, colaborar o simplemente saludar, no dudes en escribirme! ¡Estoy atento!
+                    </p>
+                </div>
+                <div class="contact__links">
+                    <div class="contact__methods">
+                        <div class="contact__method">
+                            <ion-icon name="mail-outline" class="contact__icon"></ion-icon>
+                            <a href="mailto:cristian.v62@gmail.com" class="contact__link">cristian.v62@gmail.com</a>
+                        </div>
+                        <div class="contact__method">
+                            <ion-icon name="logo-linkedin" class="contact__icon"></ion-icon>
+                            <a href="https://www.linkedin.com/in/cristian-vargas-npm/" target="_blank" class="contact__link">LinkedIn Profile</a>
+                        </div>
+                        <div class="contact__method">
+                            <ion-icon name="logo-github" class="contact__icon"></ion-icon>
+                            <a href="https://github.com/Malvadapapa" target="_blank" class="contact__link">GitHub Profile</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <p>© 2025 <span class="malvada">Malvada</span> <span class="papa">Papa</span>. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer__links">
+                <a href="https://www.linkedin.com/in/cristian-vargas-npm/" target="_blank" class="footer__link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="https://github.com/Malvadapapa" target="_blank" class="footer__link">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://x.com/malvada_papa" target="_blank" class="footer__link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
