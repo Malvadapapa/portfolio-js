@@ -194,7 +194,6 @@ html {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Dark mode*/
 .header__toggle {
     position: relative;
     width: 60px;
@@ -276,7 +275,6 @@ body.dark-mode .header__toggle:hover .toggle-circle {
     border-color: #FCDE5B;
 }
 
-/* Header Responsive Styles */
 @media (max-width: 800px) {
     .header__hamburger {
         display: flex;
@@ -331,12 +329,20 @@ body.dark-mode .header__toggle:hover .toggle-circle {
         padding: 1rem 0;
     }
     
-    .header__toggle, .header__hamburger {
+    .header__toggle {
+        margin-right: 20px;
+        z-index: 102;
+        position: relative; 
+    }
+    
+    .header__hamburger {
         margin-right: 20px;
         z-index: 102;
     }
     
-
+    .header__nav--active ~ .header__toggle {
+        display: none;
+    }
 }
 
 /* ==========================================
@@ -362,7 +368,6 @@ body.dark-mode .header__toggle:hover .toggle-circle {
     transform: translateY(-2px);
 }
 
-/* Botón con efecto de llenado */
 .btn {
   font-size: 17px;
   background: transparent;
@@ -427,7 +432,6 @@ body.dark-mode .header__toggle:hover .toggle-circle {
   transform: translateY(2px);
 }
 
-/* Dark mode specific styles for buttons */
 body.dark-mode .btn:hover {
   color: var(--text);
   transition-delay: 0.5s;
@@ -444,7 +448,6 @@ body.dark-mode .button .button__icon ion-icon {
   color: white;
 }
 
-/* Button Responsive Styles */
 @media (max-width: 768px) {
     .btn { 
         padding: 0.8em 1.2em;
@@ -464,7 +467,6 @@ body.dark-mode .button .button__icon ion-icon {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Ajustes para modo oscuro */
 body.dark-mode .section--hero {
     background: rgba(0, 0, 0, 0.15);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -509,7 +511,6 @@ body.dark-mode .section--hero {
     box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
 
-/* HERO ROW LAYOUT */
 .hero--row {
     display: flex;
     align-items: center;
@@ -571,7 +572,6 @@ body.dark-mode .section--hero {
     background: #fff; 
 }
 
-/* Animated Hero Title */
 .hero__title--animated {
   position: relative;
   display: flex;
@@ -656,7 +656,6 @@ body.dark-mode .section--hero {
   }
 }
 
-/* Hero Responsive Styles */
 @media (max-width: 900px) {
     .hero--row {
         flex-direction: column;
@@ -725,7 +724,6 @@ body.dark-mode .section--hero {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Quitar sombra específicamente para skills y proyectos */
 .section--skills,
 .section--projects {
     box-shadow: none;
@@ -1007,7 +1005,6 @@ body.dark-mode .tag {
     flex-wrap: wrap;
 }
 
-/* Dark mode specific styles for Skills */
 body.dark-mode .skill__bar {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -1078,7 +1075,6 @@ body.dark-mode .skill__bar {
     color: #0098DB;
 }
 
-/* Tech Icons Responsive Styles */
 @media (max-width: 768px) {
     .tech-icons {
         gap: 1.5rem;
@@ -1151,7 +1147,6 @@ body.dark-mode .skill__bar {
     margin-top: 1.5rem;
 }
 
-/* Paginación personalizada para proyectos */
 .projects-pagination {
     text-align: center;
     margin-top: 3rem; 
@@ -1190,7 +1185,6 @@ body.dark-mode .skill__bar {
     border-color: var(--primary);
 }
 
-/* Dark mode specific styles for Projects */
 body.dark-mode .project {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1199,18 +1193,17 @@ body.dark-mode .projects-pagination .swiper-pagination-bullet-active {
     color: var(--text);
 }
 
-/* Projects Responsive Styles */
 @media (max-width: 768px) {
     .projectsSwiper {
-        padding-bottom: 100px; /* Más espacio en móvil */
+        padding-bottom: 100px; 
     }
     
     .projects {
-        margin-bottom: 2.5rem; /* Más margen en móvil */
+        margin-bottom: 2.5rem; 
     }
     
     .projects-pagination {
-        margin-top: 2.5rem; /* Más margen en móvil */
+        margin-top: 2.5rem; 
     }
     
     .project {
@@ -1328,12 +1321,10 @@ body.dark-mode .projects-pagination .swiper-pagination-bullet-active {
     to { transform: translateX(0); }
 }
 
-/* Dark mode specific styles for Contact */
 body.dark-mode .contact__method:hover .contact__icon {
     color: #000000; 
 }
 
-/* Contact Responsive Styles */
 @media (max-width: 900px) { 
     .contact {
         flex-direction: column;
@@ -1376,7 +1367,7 @@ body.dark-mode .contact__method:hover .contact__icon {
     gap: 1rem;
 }
 
-.footer__content p { /* For text like "Malvada" and "Papa" */
+.footer__content p {
     transition: all var(--transition);
 }
 
@@ -1426,12 +1417,11 @@ body.dark-mode .contact__method:hover .contact__icon {
     to { transform: rotate(0deg); }
 }
 
-/* Dark mode specific styles for Footer */
+
 body.dark-mode .footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Footer Responsive Styles */
 @media (max-width: 900px) {
     .footer__container {
         flex-direction: column;
@@ -1459,7 +1449,6 @@ body.dark-mode .footer {
 /* ==========================================
    UTILIDADES Y ANIMACIONES
 ========================================== */
-/* Overlay para el menú mobile */
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -1521,7 +1510,7 @@ body.dark-mode .form__input {
 ========================================== */
 .projectsSwiper {
     width: 100%;
-    padding-bottom: 80px; /* Aumentado desde 50px a 80px */
+    padding-bottom: 80px; 
 }
 
 .projectsSwiper .swiper-slide {
@@ -1529,7 +1518,7 @@ body.dark-mode .form__input {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-bottom: 2rem; /* Agregado padding inferior */
+    padding-bottom: 2rem; 
 }
 
 .projects {
@@ -1537,7 +1526,7 @@ body.dark-mode .form__input {
     flex-direction: column;
     gap: 3rem;
     width: 100%;
-    margin-bottom: 2rem; /* Agregado margen inferior */
+    margin-bottom: 2rem;
 }
 
 .project {
@@ -1593,12 +1582,11 @@ body.dark-mode .form__input {
     margin-top: 1.5rem;
 }
 
-/* Paginación personalizada para proyectos */
 .projects-pagination {
     text-align: center;
-    margin-top: 3rem; /* Aumentado desde 2rem a 3rem */
+    margin-top: 3rem; 
     position: relative;
-    z-index: 10; /* Agregado z-index para asegurar que esté por encima */
+    z-index: 10; 
 }
 
 .projects-pagination .swiper-pagination-bullet {
@@ -1621,8 +1609,8 @@ body.dark-mode .form__input {
 
 .projects-pagination .swiper-pagination-bullet:hover {
     border-color: var(--primary);
-    color: var(--background); /* Cambiar a color de fondo para mejor contraste */
-    background: var(--primary); /* Agregar fondo primario en hover */
+    color: var(--background);
+    background: var(--primary); 
     transform: translateY(-2px);
 }
 
@@ -1632,7 +1620,7 @@ body.dark-mode .form__input {
     border-color: var(--primary);
 }
 
-/* Dark mode specific styles for Projects */
+
 body.dark-mode .project {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1641,18 +1629,17 @@ body.dark-mode .projects-pagination .swiper-pagination-bullet-active {
     color: var(--text);
 }
 
-/* Projects Responsive Styles */
 @media (max-width: 768px) {
     .projectsSwiper {
-        padding-bottom: 100px; /* Más espacio en móvil */
+        padding-bottom: 100px; 
     }
     
     .projects {
-        margin-bottom: 2.5rem; /* Más margen en móvil */
+        margin-bottom: 2.5rem;
     }
     
     .projects-pagination {
-        margin-top: 2.5rem; /* Más margen en móvil */
+        margin-top: 2.5rem;
     }
     
     .project {
